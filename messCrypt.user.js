@@ -7,11 +7,12 @@
 // @match        *://*
 // @grant        none
 // @require      https://code.jquery.com/jquery-3.5.1.slim.js
-// @require      https://raw.githubusercontent.com/SilantevDenis/Remove-ads-on-vc-dtf-tj/master/scripts.js
+// @require      https://raw.githubusercontent.com/SilantevDenis/messCrypt/master/js/aes-min.js
 // ==/UserScript==
 
 (function () {
   "use strict";
 
-  scripts();
+  let encrypted = CryptoJS.AES.encrypt("Message", "Secret Passphrase");
+​   console.log(encrypted)
 })();
