@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Настройки</title>
+
+    <!-- jquery -->
+    <script src="js/jquery-3.5.1.min.js"></script>
+
+    <!-- bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+
+    <!-- шифрование -->
+    <script src="js/aes.js"></script>
+
+    <!-- my script -->
+    <script src="js/popup.js"></script>
+
+    <!-- my css -->
+    <link rel="stylesheet" href="css/popup.css" />
+  </head>
+  <body>
+    <br />
+    <header class="container">
+      <h5>
+        <img src="images/icon_32.png" alt="" />
+        Message Crypter
+      </h5>
+    </header>
+
+    <hr />
+
+    <div class="container">
+      <h5>Add encryption keys</h5>
+      <table width="400px">
+        <th><label>Name</label></th>
+        <th><label>Key</label></th>
+        <th><label>Default</label></th>
+
+        <tr>
+          <td>
+            <input
+              type="text"
+              class="name form-control m-t-5"
+              data-last-value=""
+              placeholder="my_key"
+            />
+          </td>
+          <td>
+            <input
+              type="text"
+              class="key form-control m-t-5"
+              data-last-value=""
+              placeholder="onP$Pn~St%"
+            />
+          </td>
+          <td class="text-center">
+            <input
+              type="radio"
+              name="select-key"
+              for=""
+              class="radio form-check-input m-t-5"
+              checked
+            />
+          </td>
+        </tr>
+        <tr class="d-none">
+          <td>
+            <input
+              type="text"
+              class="name form-control m-t-5"
+              data-last-value=""
+              placeholder="my_key"
+            />
+          </td>
+          <td>
+            <input
+              type="text"
+              class="key form-control m-t-5"
+              data-last-value=""
+              placeholder="onP$Pn~St%"
+            />
+          </td>
+          <td class="text-center">
+            <input
+              type="radio"
+              name="select-key"
+              for=""
+              class="radio form-check-input m-t-5"
+            />
+          </td>
+        </tr>
+        <tr class="d-none">
+          <td>
+            <input
+              type="text"
+              class="name form-control m-t-5"
+              data-last-value=""
+              placeholder="my_key"
+            />
+          </td>
+          <td>
+            <input
+              type="text"
+              class="key form-control m-t-5"
+              data-last-value=""
+              placeholder="onP$Pn~St%"
+            />
+          </td>
+          <td class="text-center">
+            <input
+              type="radio"
+              name="select-key"
+              for=""
+              class="radio form-check-input m-t-5"
+            />
+          </td>
+        </tr>
+        <tr class="d-none">
+          <td>
+            <input
+              type="text"
+              class="name form-control m-t-5"
+              data-last-value=""
+              placeholder="my_key"
+            />
+          </td>
+          <td>
+            <input
+              type="text"
+              class="key form-control m-t-5"
+              data-last-value=""
+              placeholder="onP$Pn~St%"
+            />
+          </td>
+          <td class="text-center">
+            <input
+              type="radio"
+              name="select-key"
+              for=""
+              class="radio form-check-input m-t-5"
+            />
+          </td>
+        </tr>
+        <tr class="d-none">
+          <td>
+            <input
+              type="text"
+              class="name form-control m-t-5"
+              data-last-value=""
+              placeholder="my_key"
+            />
+          </td>
+          <td>
+            <input
+              type="text"
+              class="key form-control m-t-5"
+              data-last-value=""
+              placeholder="onP$Pn~St%"
+            />
+          </td>
+          <td class="text-center">
+            <input
+              type="radio"
+              name="select-key"
+              for=""
+              class="radio form-check-input m-t-5"
+            />
+          </td>
+        </tr>
+        <tr class="d-none">
+          <td>
+            <input
+              type="text"
+              class="name form-control m-t-5"
+              data-last-value=""
+              placeholder="my_key"
+            />
+          </td>
+          <td>
+            <input
+              type="text"
+              class="key form-control m-t-5"
+              data-last-value=""
+              placeholder="onP$Pn~St%"
+            />
+          </td>
+          <td class="text-center">
+            <input
+              type="radio"
+              name="select-key"
+              for=""
+              class="radio form-check-input m-t-5"
+            />
+          </td>
+        </tr>
+        <tr class="d-none">
+          <td>
+            <input
+              type="text"
+              class="name form-control m-t-5"
+              data-last-value=""
+              placeholder="my_key"
+            />
+          </td>
+          <td>
+            <input
+              type="text"
+              class="key form-control m-t-5"
+              data-last-value=""
+              placeholder="onP$Pn~St%"
+            />
+          </td>
+          <td class="text-center">
+            <input
+              type="radio"
+              name="select-key"
+              for=""
+              class="radio form-check-input m-t-5"
+            />
+          </td>
+        </tr>
+        <tr class="d-none">
+          <td>
+            <input
+              type="text"
+              class="name form-control m-t-5"
+              data-last-value=""
+              placeholder="my_key"
+            />
+          </td>
+          <td>
+            <input
+              type="text"
+              class="key form-control m-t-5"
+              data-last-value=""
+              placeholder="onP$Pn~St%"
+            />
+          </td>
+          <td class="text-center">
+            <input
+              type="radio"
+              name="select-key"
+              for=""
+              class="radio form-check-input m-t-5"
+            />
+          </td>
+        </tr>
+        <tr class="d-none">
+          <td>
+            <input
+              type="text"
+              class="name form-control m-t-5"
+              data-last-value=""
+              placeholder="my_key"
+            />
+          </td>
+          <td>
+            <input
+              type="text"
+              class="key form-control m-t-5"
+              data-last-value=""
+              placeholder="onP$Pn~St%"
+            />
+          </td>
+          <td class="text-center">
+            <input
+              type="radio"
+              name="select-key"
+              for=""
+              class="radio form-check-input m-t-5"
+            />
+          </td>
+        </tr>
+        <tr class="d-none">
+          <td>
+            <input
+              type="text"
+              class="name form-control m-t-5"
+              data-last-value=""
+              placeholder="my_key"
+            />
+          </td>
+          <td>
+            <input
+              type="text"
+              class="key form-control m-t-5"
+              data-last-value=""
+              placeholder="onP$Pn~St%"
+            />
+          </td>
+          <td class="text-center">
+            <input
+              type="radio"
+              name="select-key"
+              for=""
+              class="radio form-check-input m-t-5"
+            />
+          </td>
+        </tr>
+        <tr class="d-none">
+          <td>
+            <input
+              type="text"
+              class="name form-control m-t-5"
+              data-last-value=""
+              placeholder="my_key"
+            />
+          </td>
+          <td>
+            <input
+              type="text"
+              class="key form-control m-t-5"
+              data-last-value=""
+              placeholder="onP$Pn~St%"
+            />
+          </td>
+          <td class="text-center">
+            <input
+              type="radio"
+              name="select-key"
+              for=""
+              class="radio form-check-input m-t-5"
+            />
+          </td>
+        </tr>
+        <tr class="d-none">
+          <td>
+            <input
+              type="text"
+              class="name form-control m-t-5"
+              data-last-value=""
+              placeholder="my_key"
+            />
+          </td>
+          <td>
+            <input
+              type="text"
+              class="key form-control m-t-5"
+              data-last-value=""
+              placeholder="onP$Pn~St%"
+            />
+          </td>
+          <td class="text-center">
+            <input
+              type="radio"
+              name="select-key"
+              for=""
+              class="radio form-check-input m-t-5"
+            />
+          </td>
+        </tr>
+        <tr class="d-none">
+          <td>
+            <input
+              type="text"
+              class="name form-control m-t-5"
+              data-last-value=""
+              placeholder="my_key"
+            />
+          </td>
+          <td>
+            <input
+              type="text"
+              class="key form-control m-t-5"
+              data-last-value=""
+              placeholder="onP$Pn~St%"
+            />
+          </td>
+          <td class="text-center">
+            <input
+              type="radio"
+              name="select-key"
+              for=""
+              class="radio form-check-input m-t-5"
+            />
+          </td>
+        </tr>
+        <tr class="d-none">
+          <td>
+            <input
+              type="text"
+              class="name form-control m-t-5"
+              data-last-value=""
+              placeholder="my_key"
+            />
+          </td>
+          <td>
+            <input
+              type="text"
+              class="key form-control m-t-5"
+              data-last-value=""
+              placeholder="onP$Pn~St%"
+            />
+          </td>
+          <td class="text-center">
+            <input
+              type="radio"
+              name="select-key"
+              for=""
+              class="radio form-check-input m-t-5"
+            />
+          </td>
+        </tr>
+        <tr class="d-none">
+          <td>
+            <input
+              type="text"
+              class="name form-control m-t-5"
+              data-last-value=""
+              placeholder="my_key"
+            />
+          </td>
+          <td>
+            <input
+              type="text"
+              class="key form-control m-t-5"
+              data-last-value=""
+              placeholder="onP$Pn~St%"
+            />
+          </td>
+          <td class="text-center">
+            <input
+              type="radio"
+              name="select-key"
+              for=""
+              class="radio form-check-input m-t-5"
+            />
+          </td>
+        </tr>
+        <tr class="d-none">
+          <td>
+            <input
+              type="text"
+              class="name form-control m-t-5"
+              data-last-value=""
+              placeholder="my_key"
+            />
+          </td>
+          <td>
+            <input
+              type="text"
+              class="key form-control m-t-5"
+              data-last-value=""
+              placeholder="onP$Pn~St%"
+            />
+          </td>
+          <td class="text-center">
+            <input
+              type="radio"
+              name="select-key"
+              for=""
+              class="radio form-check-input m-t-5"
+            />
+          </td>
+        </tr>
+        <tr class="d-none">
+          <td>
+            <input
+              type="text"
+              class="name form-control m-t-5"
+              data-last-value=""
+              placeholder="my_key"
+            />
+          </td>
+          <td>
+            <input
+              type="text"
+              class="key form-control m-t-5"
+              data-last-value=""
+              placeholder="onP$Pn~St%"
+            />
+          </td>
+          <td class="text-center">
+            <input
+              type="radio"
+              name="select-key"
+              for=""
+              class="radio form-check-input m-t-5"
+            />
+          </td>
+        </tr>
+        <tr class="d-none">
+          <td>
+            <input
+              type="text"
+              class="name form-control m-t-5"
+              data-last-value=""
+              placeholder="my_key"
+            />
+          </td>
+          <td>
+            <input
+              type="text"
+              class="key form-control m-t-5"
+              data-last-value=""
+              placeholder="onP$Pn~St%"
+            />
+          </td>
+          <td class="text-center">
+            <input
+              type="radio"
+              name="select-key"
+              for=""
+              class="radio form-check-input m-t-5"
+            />
+          </td>
+        </tr>
+        <tr class="d-none">
+          <td>
+            <input
+              type="text"
+              class="name form-control m-t-5"
+              data-last-value=""
+              placeholder="my_key"
+            />
+          </td>
+          <td>
+            <input
+              type="text"
+              class="key form-control m-t-5"
+              data-last-value=""
+              placeholder="onP$Pn~St%"
+            />
+          </td>
+          <td class="text-center">
+            <input
+              type="radio"
+              name="select-key"
+              for=""
+              class="radio form-check-input m-t-5"
+            />
+          </td>
+        </tr>
+        <tr class="d-none">
+          <td>
+            <input
+              type="text"
+              class="name form-control m-t-5"
+              data-last-value=""
+              placeholder="my_key"
+            />
+          </td>
+          <td>
+            <input
+              type="text"
+              class="key form-control m-t-5"
+              data-last-value=""
+              placeholder="onP$Pn~St%"
+            />
+          </td>
+          <td class="text-center">
+            <input
+              type="radio"
+              name="select-key"
+              for=""
+              class="radio form-check-input m-t-5"
+            />
+          </td>
+        </tr>
+      </table>
+
+      <button
+        id="add"
+        type="button"
+        class="btn btn-primary btn-sm btn-block m-t-5"
+      >
+        +
+      </button>
+
+      <br />
+    </div>
+  </body>
+</html>

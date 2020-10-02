@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "messCrypter",
+  "description": "Social media message encryptor",
+  "version": "0.0.1",
+  "icons": {
+    "128": "images/icon_128.png",
+    "64": "images/icon_64.png",
+    "32": "images/icon_32.png"
+  },
+  "browser_action": {
+    "default_icon": "images/icon_32.png",
+    "default_popup": "popup.html"
+  },
+  "web_accessible_resources": ["images/*.png", "css/*", "js/*"],
+  "permissions": ["activeTab", "storage"],
+  "content_scripts": [
+    {
+      "matches": ["https://vk.com/*"],
+      "js": ["js/jquery-3.5.1.min.js", "js/aes.js", "js/content.js"]
+    }
+  ]
+}
