@@ -29,14 +29,12 @@ function cacheReady() {
     ///////////////////////////// поиск и замена зашифрованного текста
     // получаем весь html
     const html = $("body").html();
-    console.log(html);
     // находим и заменяем строки с шифрами
     let newHTML = html.replace(regExp, (match, name, key, offset, string) => {
       // отправляем на расшифровку
       let decrypt = decrypter(name, key);
       // если ключ не найден
       if (decrypt == undefined) {
-        // console.log("messCrypter: key '" + name + "' not found");
         // отправляем имя ключа
         return "messCrypter: key '" + name + "' not found";
         // если все ок
@@ -113,6 +111,7 @@ function cacheReady() {
       let key = storageCache[name];
       // шифруем
       let encrypt = CryptoJS.AES.encrypt(mess, key).toString();
+
       // возвращаем
       return { encrypt: encrypt, name: name };
     } // end encrypter

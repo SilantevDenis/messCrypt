@@ -1,10 +1,10 @@
-//  LOCAL Storage
-let storage = chrome.storage.sync;
+//  Storage type
+const storage = chrome.storage.sync;
 
 ///////// кэшируем базу ключей
 let storageCache = {};
 // запрашиваем всю БД
-chrome.storage.sync.get(null, function (data) {
+storage.get(null, function (data) {
   // записываем в кэш
   storageCache = data;
   // можно выполнять остальные скрипты
@@ -22,7 +22,7 @@ function cacheReady() {
   //// ждем загрузки страницы
   $(document).ready(() => {
     ///////////////////////// отображение полей
-    let i = 0;
+    let i = 1;
     // перебираем всю ключи
     for (let name in storageCache) {
       // пропускаем настройку
@@ -40,7 +40,6 @@ function cacheReady() {
       tr.find(".radio").attr("for", name);
       // показываем
       tr.removeClass("d-none");
-
       // прибавляем
       i++;
     }
@@ -98,6 +97,15 @@ function cacheReady() {
         dt[key] = val;
         // записываем новое значение
         storage.set(dt);
+
+        // проверяем дефолтный ключ
+        storage.get("def", function (data) {
+          // если его нет
+          if (data.def == undefined) {
+            // забиваем текущий ключ как дефолтный
+            set("def", name);
+          }
+        });
       }
     }
 
